@@ -10,21 +10,36 @@ public class Main {
         String[] movies = {"MIB", "Arrive","Black Knight","Gladiator"};
 
 
+
         System.out.println("Selecione a ambientação do seu filme:");
         System.out.println("1 - Sci - fi");
         System.out.println("2 - Medieval");
-        String ambianceOption = scanner.nextInt();
+        String ambianceOption = scanner.nextLine();
 
         System.out.println("Selecione o genero do seu filme:");
         System.out.println("1 - Comedia");
-        System.out.println("1 - Drama");
-        String genOption = scanner.nextInt();
+        System.out.println("2 - Drama");
+        String genOption = scanner.nextLine();
 
-        String filmeRecomendado = movies[ambianceOption + genOption - 2];
+        if (ambianceOption.equals("1")) {
+            if(genOption.equals("1")){
+                System.out.println(String.format("Eu indicaria o:  %s", movies[0]));
+            } else if(genOption.equals("2")){
+                System.out.println(String.format("Eu indicaria o: %s", movies[1]));
+            }
+        }
+        if (ambianceOption.equals("2")) {
+            if(genOption.equals("1")){
+                System.out.println(String.format("Eu indicaria o: é %s", movies[2]));
+            } else if(genOption.equals("2")){
+                System.out.println(String.format("Eu indicaria o: é %s", movies[3]));
+            }
+        }
 
-        System.out.println(String.format("Eu recomendo o filme: %s", filmeRecomendado));
+        scanner.close();
     }
 }
+
 
 
 
