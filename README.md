@@ -2,6 +2,6 @@
 
 LUIZ FILIPE ROMUALDO LINHARES
 
-Turma de terça!
+Turma 02 (terça-feira)!
 
 Valeu! 
