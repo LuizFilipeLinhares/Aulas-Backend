@@ -2,7 +2,7 @@ package org.example;
 
 public class Boat {
     public String name;
-    public integer size;
+    public Integer size;
 
     public Boat(String name, Integer size) {
         this.name = name;

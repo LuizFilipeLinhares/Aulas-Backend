@@ -1,25 +1,29 @@
-package org.example;
+package com.example;
+
+import org.example.BigHarbor;
 
 public class Main {
     public static void main(String[] args) {
-        // Criando a lista de barcos
-        Barco[] barcos = {
-                new Barco("Barco 1", 5),
-                new Barco("Barco 2", 8),
-                new Barco("Barco 3", 15),
-                new Barco("Barco 4", 12),
-                new Barco("Barco 5", 20)
-        };
+        Boat[] boats = new Boat[5];
+        BigHarbor bigharbor = new BigHarbor();
+        SmallHarbor smallharbor  = new SmallHarbor();
 
-        PortoPequeno portoPequeno = new PortoPequeno("Porto Pequeno", 3);
-        PortoGrande portoGrande = new PortoGrande("Porto Grande", 5);
-
-        for (Barco barco : barcos) {
-            if (barco.tamanho <= 10) {
-                portoPequeno.atracarBarco(barco);
-            } else {
-                portoGrande.atracarBarco(barco);
-            }
+        for(int i = 8; i <= 12; i++){
+            boats[i - 8] = new Boat("Barco " + i, i);
+            System.out.println(boats[i - 8].name + ": Tamanho " + boats[i - 8].size );
         }
+
+        for(int i = 0; i < boats.length; i++){
+            Boat barco = boats[i];
+
+            boolean entrarNoPortoPequeno = SmallHarbor.atracarBarco(barco);
+
+            if(entrarNoPortoPequeno){
+                continue;
+            }
+            System.out.println(String.format("%s muito grande para o porto pequeno", barco.name));
+            BigHarbor.atracarBarco(barco);
+        }
+
     }
 }
