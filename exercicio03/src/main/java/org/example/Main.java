@@ -1,12 +1,10 @@
 package com.example;
 
-import org.example.BigHarbor;
-
 public class Main {
     public static void main(String[] args) {
         Boat[] boats = new Boat[5];
-        BigHarbor bigharbor = new BigHarbor();
-        SmallHarbor smallharbor  = new SmallHarbor();
+        BigHarbor bigHarbor = new BigHarbor();
+        SmallHarbor smallHarbor  = new com.example.SmallHarbor();
 
         for(int i = 8; i <= 12; i++){
             boats[i - 8] = new Boat("Barco " + i, i);
@@ -14,15 +12,15 @@ public class Main {
         }
 
         for(int i = 0; i < boats.length; i++){
-            Boat barco = boats[i];
+            Boat boat = boats[i];
 
-            boolean entrarNoPortoPequeno = SmallHarbor.atracarBarco(barco);
+            boolean enterTheHarbor = SmallHarbor.atracarBarco(barco);
 
-            if(entrarNoPortoPequeno){
+            if(enterTheHarbor){
                 continue;
             }
-            System.out.println(String.format("%s muito grande para o porto pequeno", barco.name));
-            BigHarbor.atracarBarco(barco);
+            System.out.println(String.format("%s és grande demais para o porto pequeno", boat.name));
+            BigHarbor.dockBoat(boat);
         }
 
     }

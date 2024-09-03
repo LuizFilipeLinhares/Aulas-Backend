@@ -1,6 +1,6 @@
 package org.example;
 
-public class Boat {
+public class Boat{
     public String name;
     public Integer size;
 

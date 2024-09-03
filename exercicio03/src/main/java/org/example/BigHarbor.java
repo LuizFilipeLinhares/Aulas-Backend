@@ -3,7 +3,7 @@ package com.example;
 import org.example.Boat;
 import org.example.HarborBase;
 
-public class PortoGrande extends HarborBase {
+public class BigHarbor extends HarborBase {
     @Override
     public boolean dockBoat (Boat boat){
         if(boat.size >= 10){
