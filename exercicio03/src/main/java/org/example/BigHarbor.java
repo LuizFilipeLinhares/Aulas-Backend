@@ -1,4 +1,4 @@
-package com.example;
+package org.example;
 
 import org.example.Boat;
 import org.example.HarborBase;
@@ -7,7 +7,7 @@ public class BigHarbor extends HarborBase {
     @Override
     public boolean dockBoat (Boat boat){
         if(boat.size >= 10){
-            dockerBoats.add(boat);
+            dockBoats.add(boat);
 
             System.out.println(String.format("%s atracou!", boat.name));
             return true;

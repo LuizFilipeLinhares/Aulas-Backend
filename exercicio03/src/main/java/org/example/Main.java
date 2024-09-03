@@ -1,10 +1,10 @@
-package com.example;
+package org.example;
 
 public class Main {
     public static void main(String[] args) {
         Boat[] boats = new Boat[5];
         BigHarbor bigHarbor = new BigHarbor();
-        SmallHarbor smallHarbor  = new com.example.SmallHarbor();
+        SmallHarbor smallHarbor  = new SmallHarbor();
 
         for(int i = 8; i <= 12; i++){
             boats[i - 8] = new Boat("Barco " + i, i);
@@ -14,7 +14,7 @@ public class Main {
         for(int i = 0; i < boats.length; i++){
             Boat boat = boats[i];
 
-            boolean enterTheHarbor = SmallHarbor.atracarBarco(barco);
+            boolean enterTheHarbor = SmallHarbor.dockerBoat(boat);
 
             if(enterTheHarbor){
                 continue;

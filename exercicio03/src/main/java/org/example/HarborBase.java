@@ -1,23 +1,22 @@
-package com.example;
+package org.example;
 
-import org.example.Boat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class HarborBase  {
     public String name;
-    public List<Boat> dockerBoats  = new ArrayList<Boat>();
+    public List<Boat> dockBoats  = new ArrayList<Boat>();
 
-    public boolean dockerBoat (Boat boat){
-        dockerBoats.add(boat);
-        System.out.println(dockerBoats);
+    public static boolean dockerBoat(Boat boat){
+        dockBoats.add(boat);
+        System.out.println(dockBoats);
 
         return true;
     }
 
     public void undockBoat (Boat boat){
-        dockerBoats.remove(boat);
-        System.out.println(dockerBoats);
+        dockBoats.remove(boat);
+        System.out.println(dockBoats);
     }
 
 }
