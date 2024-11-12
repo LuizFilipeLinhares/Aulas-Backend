@@ -1,7 +1,7 @@
 package com.example.aula10.Model;
 
 
-public class Jogador {
+public class Jogador{
     private String nome;
     private String sobrenome;
 

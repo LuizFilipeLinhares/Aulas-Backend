@@ -8,11 +8,6 @@ import java.util.HashMap;
 
 @RestController
 public class Controller {
-    @GetMapping("/mundo")
-    public String helloWorld(@RequestParam String nomeEstudante, @RequestParam String sobrenomeEstudante){
-        return "Ola, " + nomeEstudante + " " + sobrenomeEstudante;
-    }
-
     @PostMapping("/jogador")
     @ResponseBody
     @ResponseStatus(HttpStatus.CREATED)
@@ -22,7 +17,7 @@ public class Controller {
         return jogador;
     }
 
-    @GetMapping("/sobre")
+    @GetMapping("/jogador")
     @ResponseBody
     public HashMap<String, String> sobre() {
         HashMap<String, String> sobre = new HashMap<>();
