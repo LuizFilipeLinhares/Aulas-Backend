@@ -1,13 +1,13 @@
-package com.example.exercicio12;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Exercicio12Application {
+public class Exercicio7Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Exercicio12Application.class, args);
+		SpringApplication.run(Exercicio7Application.class, args);
 	}
 
 }
